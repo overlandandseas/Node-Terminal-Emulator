@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Node Terminal Emulator</title>
+    <link href="custom.css" rel="stylesheet"></link>
+</head>
+<body>
+    <div ng-app="guake" class="contain">
+        <div ng-controller="guakeController">
+            <form novalidate>
+                <p>+{{ofNum('-', 80)}}+
+                    <span ng-repeat="b in makeArray(enters) track by $index">
+                        <br>
+                        |{{ofNum('&nbsp;', 80)}}|
+                    </span>
+                    <span ng-repeat="c in commands track by $index">
+                        <br>| {{c + ofNum('&nbsp;', 79 - c.length)}}|
+                    </span><br>
+                    +{{ofNum('-', 80)}}+<br>
+                    <span>{{message}} <input ng-model="console" /><br></span>
+                    +{{ofNum('-', 80)}}+<br>
+                </p>
+                <input type="submit" ng-click="addCommand(console)" style="display: none;" />
+            </form>
+        </div>
+    </div>
+    <script src="custom.js"></script>
+</body>
+</html>

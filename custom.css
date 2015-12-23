@@ -1,0 +1,17 @@
+body{
+    background: #262626;
+    color: #9c9;
+    font-family: monospace;
+    }
+    input{
+      outline: 0;
+      border: none;
+      background: none;
+      width: 479px;
+      color: #9c9;
+    }
+.contain{
+  /* border: 1px solid #9c9; */
+  width: 650px;
+  margin: 0 auto;
+}
